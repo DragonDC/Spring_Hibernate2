@@ -35,7 +35,7 @@ public class ManagerPlanetyTest {
 	private final int il_ks1 = 2;
 	private final int il_ks2 = 43;
 	@Test
-	public void addPrawnikCheck() {
+	public void addPlanetaCheck() {
 		
 		Planeta planeta = new Planeta();
 		planeta.setNazwa(nazwa1);
@@ -133,7 +133,7 @@ public class ManagerPlanetyTest {
 	
 	
 	@Test
-	public void editPrawnikCheck() {
+	public void editPlanetaCheck() {
 		Planeta planeta1 = new Planeta();
 		planeta1.setNazwa(nazwa2);
 		planeta1.setSrednica(srednica2);
