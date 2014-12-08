@@ -13,23 +13,22 @@ import javax.persistence.Table;
 @Table(name="Planeta")
 @NamedQueries({
 	@NamedQuery(name = "planeta.all", query = "Select p from Planeta p"),
-	@NamedQuery(name = "planeta.byId", query = "Select p from Planeta p where p.id = :id")
+	@NamedQuery(name = "planeta.byId", query = "Select p from Planeta p where p.id = :id"),
+	@NamedQuery(name = "planeta.bySrednica", query = "Select p from Planeta p where p.srednica = :srednica")
 })
 public class Planeta {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;	
 	
+	private Long id;		
 	private String nazwa;
-	
 	private int srednica;
 	
 	@Column(name="ilosc_ksiezycow")
 	private int il_ks;
 	
 	
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}
